@@ -3,7 +3,7 @@ A playgound with a function `async<T>(timeout: TimeInterval, work: @escaping() a
 Use it like this:
 
 ```swift
-func someAsyncFunction() async -> Double? {
+func someAsyncFunction() async -> SomeType {
   ...
   await something
   ...
