@@ -11,7 +11,7 @@ enum AsyncError: Error {
 }
 
 /**
- Starts the call and a timout task and cancels the one, which takes longer.
+ Starts the work (task) and a timout task and cancels the one, which takes longer.
  Returns result from worker task or throws `AsyncError.timeout`, when worker was cancelled.
  */
 func async<T>(timeout: TimeInterval, work: @escaping() async -> T) async throws -> T {
