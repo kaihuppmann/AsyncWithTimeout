@@ -11,8 +11,9 @@ func someAsyncFunction() async -> Double? {
 }
 ...
 do {
-  result = try await async(timeout: 1, work: someAsyncFunction) // tries to receive result from
-                                                                // someAsyncFunction within 1 second                             
+  let result = try await async(timeout: 1, work: someAsyncFunction) // tries to receive result from
+                                                                // someAsyncFunction within 1 second
+  ...                          
 } catch let asyncError as AsyncError {
   // will come here, when execution takes longer than one second
 } catch {
